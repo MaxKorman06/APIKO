@@ -3,10 +3,9 @@
 // Приклад:
 // removeObj([{age: 1}, {age: 2}, {age: 2}, {year: 2}], "age", 2) => [ { age: 1 }, { year: 2 } ]
 
-function removeObj(arrayOfObj, keyName, value) 
-{
-    const filteredArray = arrayOfObj.filter(obj => obj[keyName] !== value);
-    return filteredArray;
+function removeObj(arrayOfObj, keyName, value) {
+  const filteredArray = arrayOfObj.filter((obj) => obj[keyName] !== value);
+  return filteredArray;
 }
 const arr = [{ age: 1 }, { age: 2 }, { age: 2 }, { year: 2 }];
 
@@ -14,4 +13,4 @@ const result1 = removeObj(arr, "age", 2);
 console.log(result1);
 
 const result2 = removeObj(arr, "year", 2);
-console.log(result2); 
+console.log(result2);

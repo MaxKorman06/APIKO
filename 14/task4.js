@@ -4,32 +4,26 @@
 // Приклад:
 // {Max: {age: 23, city: “London”}, Mike: {age: 20: city: “NY”}} => [“Max”]
 
-function findUser(initialObject) 
-{
-    let resultArray = [];
-  
-    for (const name in initialObject) 
-    {
-      if (initialObject[name].age > 18 && initialObject[name].city === "London") 
-      {
-        resultArray.push(name);
-      }
+function findUser(initialObject) {
+  let resultArray = [];
+
+  for (const name in initialObject) {
+    if (initialObject[name].age > 18 && initialObject[name].city === "London") {
+      resultArray.push(name);
     }
-    console.log(resultArray);
   }
-  
-  const users = 
-  {
-    Max: 
-    { 
-        age: 23, 
-        city: "London" 
-    },
-    Mike: 
-    { 
-        age: 20, 
-        city: "NY" 
-    },
-  };
-  
-  findUser(users);
+  console.log(resultArray);
+}
+
+const users = {
+  Max: {
+    age: 23,
+    city: "London",
+  },
+  Mike: {
+    age: 20,
+    city: "NY",
+  },
+};
+
+findUser(users);

@@ -3,18 +3,15 @@
 // Приклад:
 // [2, “string”, 3, , , ”test”] => [“string”, “test”]
 
-function filterArray(initialArray) 
-{
-    let resultArray = [];
-    for (let i = 0; i < initialArray.length; i++) 
-    {
-      if (typeof initialArray[i] === 'string') 
-      {
-        resultArray.push(initialArray[i]);
-      }
+function filterArray(initialArray) {
+  let resultArray = [];
+  for (let i = 0; i < initialArray.length; i++) {
+    if (typeof initialArray[i] === "string") {
+      resultArray.push(initialArray[i]);
     }
-    console.log(resultArray);
   }
-  
-  const inputArray = [2, "string", 3, "12345" , "sadfghkl" , "test"];
-  filterArray(inputArray);
+  console.log(resultArray);
+}
+
+const inputArray = [2, "string", 3, "12345", "sadfghkl", "test"];
+filterArray(inputArray);

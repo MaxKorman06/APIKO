@@ -2,6 +2,9 @@
 
 function calculateWordsInString(string) {
   let numberOfWords = 1;
+  if (string[0] === " " && string[index + 1] != " ") {
+    numberOfWords--;
+  }
   for (let index = 0; index < string.length; index++) {
     if (string[index] === " " && string[index + 1] != " ") {
       numberOfWords += 1;

@@ -1,0 +1,57 @@
+Завдання 4. Створюємо ще один окремий файл constants у структурі проекту. 
+Він міститиме одну змінну turtles, яку експортуватиме. 
+В данну змінну записуємо наступний статичний масив даних:
+
+[
+ {
+   name: 'Leonardo',
+   nickName: 'Leo',
+   weapon: 'Katana',
+   imgUrl: 'https://upload.wikimedia.org/wikipedia/en/e/ed/Leonardo_%28Teenage_Mutant_Ninja_Turtles%29.jpg',
+ },
+ {
+   name: 'Donatello',
+   nickName: 'Don',
+   weapon: 'Bo staff',
+   imgUrl: 'https://upload.wikimedia.org/wikipedia/en/5/5a/Donatello_%28Teenage_Mutant_Ninja_Turtles%29.jpg',
+ },
+ {
+   name: 'Michelangelo',
+   nickName: 'Mikey',
+   weapon: 'Nunchucks',
+   imgUrl: 'https://upload.wikimedia.org/wikipedia/en/f/f3/Michelangelo_%28Teenage_Mutant_Ninja_Turtles%29.jpg',
+ },
+ {
+   name: 'Raphael',
+   nickName: 'Raph',
+   weapon: 'Sai',
+   imgUrl: 'https://upload.wikimedia.org/wikipedia/en/7/72/Raphael_%28Teenage_Mutant_Ninja_Tutles%29.jpg',
+ },
+]
+
+
+Також створюємо основний компонент окремим файлом - App. 
+У даному файлі повинні імпортуватись раніше створенні компоненти AppWrapper, 
+AppItem, Image, і також змінна turtles із файлу constants. 
+Даний компонент повинен відображати компонент AppWrapper, 
+у який передавати текст “React Turtles” через пропсу title. 
+Також всередині тега компонента AppWrapper відбуватиметься маппінг масиву turtles. 
+Для кожного елемента масиву повертатимемо компонент AppItem, який прийматиме наступні параметри:
+
+у пропсу name записуємо відповідне значення елемента масиву даних - також name;
+
+у пропсу description записуємо наступний текст - 
+<nickName> kills people who doesn’t learn React with <weapon> - 
+де значення nickName і weapon - відповідні значення елементу масиву даних. 
+Щоб отримати дану стрічку для запису в пропсу створити функцію getItemDescription, 
+яка конкатинуватиме передані параметри у необхідний вигляд. 
+Дану функцію також розмістити у окремому файлі utils та імпортувати звідти у файл основного компонента App;
+
+у пропсу Image передаємо імпортований раніше створений компонент Image. 
+Відповідно передаючи цей компоненту вигляді пропси, також і вказуємо його власну пропсу imgUrl, 
+яка відповідно береться із елемента масиву з ідентичною назвою - imgUrl.
+
+
+Відповідно після реалізації усіх попередніх пунктів імпортувати компонент App в кореневий файл index, 
+де відрендерити за допомогою ReactDOM.render. Додаток має запускатись і відображати усю інформацію правильно, 
+із вказаними стилями, без жодних помилок в консолі.

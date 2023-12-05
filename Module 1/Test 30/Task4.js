@@ -29,6 +29,8 @@ function getSpecifiedAlbums(ids = []) {
   return Promise.all(albumPromises);
 }
 
+const albumIds = [1, 2, 3, 4, 5];
+
 getSpecifiedAlbums(albumIds)
   .then((albums) => {
     console.log("Specified albums:", albums);
@@ -37,4 +39,6 @@ getSpecifiedAlbums(albumIds)
     console.error("Error getting specified albums:", error);
   });
 
-  const albumIds = [1, 2, 3, 4, 5];
+
+
+  

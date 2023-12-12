@@ -4,9 +4,11 @@
     align-items: center;
     justify-content: center;
     padding: 20px;
-    background-color: #000000;
+    background-color: #2e2e2e;
     border: 1px solid #ccc;
     border-radius: 5px;
+    height: 40%;
+    width: 100%;
 }
 
 .image-container {
